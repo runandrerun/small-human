@@ -1,0 +1,42 @@
+.comment-box {
+  text-align: left;
+  margin-top: 20px;
+  textarea {
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    width: 90%;
+    transition: transform 0.8s;
+
+    &:focus {
+      outline: none !important;
+      border:1px solid #FA7268;
+      box-shadow: 0 0 10px #FA7268;
+    }
+  }
+  button {
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: box-shadow 0.8s, transform 0.8s;
+    background-color: #FA7268;
+    color: #ffffff;
+    border: 1px solid #FA7268;
+
+    &:hover, &:active {
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+
+    &:disabled {
+      background-color: #eaeaea;
+      color: #000000;
+      border: 1px solid #eaeaea;
+    }
+  }
+}

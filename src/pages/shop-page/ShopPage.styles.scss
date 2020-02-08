@@ -1,0 +1,17 @@
+.shop-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px auto;
+  .back-arrow {
+    position: absolute;
+    width: 40px;
+    text-align: left!important;
+    left: 10px;
+    top: 80px;
+    .arrow {
+      width: 30px;
+      height: auto;
+    }
+  }
+}

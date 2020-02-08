@@ -1,0 +1,28 @@
+.about-card {
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+    span {
+      color: #FA7268;
+    }
+  }
+  .about-content {
+    text-align: left;
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        padding: 5px;
+        border-bottom: 1px solid #292929;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
