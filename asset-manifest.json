@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/small-human/static/css/main.cd2cd5c0.chunk.css",
+    "main.js": "/small-human/static/js/main.f3c2f01d.chunk.js",
+    "main.js.map": "/small-human/static/js/main.f3c2f01d.chunk.js.map",
+    "runtime-main.js": "/small-human/static/js/runtime-main.d9d69480.js",
+    "runtime-main.js.map": "/small-human/static/js/runtime-main.d9d69480.js.map",
+    "static/js/2.c5fb6ce4.chunk.js": "/small-human/static/js/2.c5fb6ce4.chunk.js",
+    "static/js/2.c5fb6ce4.chunk.js.map": "/small-human/static/js/2.c5fb6ce4.chunk.js.map",
+    "index.html": "/small-human/index.html",
+    "precache-manifest.2a7dd55d33d43a76e03936242f3700dd.js": "/small-human/precache-manifest.2a7dd55d33d43a76e03936242f3700dd.js",
+    "service-worker.js": "/small-human/service-worker.js",
+    "static/css/main.cd2cd5c0.chunk.css.map": "/small-human/static/css/main.cd2cd5c0.chunk.css.map",
+    "static/js/2.c5fb6ce4.chunk.js.LICENSE.txt": "/small-human/static/js/2.c5fb6ce4.chunk.js.LICENSE.txt",
+    "static/media/leaves.svg": "/small-human/static/media/leaves.40a4d279.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9d69480.js",
+    "static/js/2.c5fb6ce4.chunk.js",
+    "static/css/main.cd2cd5c0.chunk.css",
+    "static/js/main.f3c2f01d.chunk.js"
+  ]
+}
