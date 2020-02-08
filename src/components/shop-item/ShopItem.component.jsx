@@ -43,6 +43,7 @@ class ShopItem extends Component {
           <div className="item-image-container">
             <img
               src={'https://via.placeholder.com/600'}
+              alt={selectedPlant.type}
             />
           </div>
           <div className="item-content">

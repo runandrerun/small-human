@@ -14,6 +14,7 @@ const ShopPage = ({ history }) => {
       >
         <img
           className="arrow"
+          alt="Back arrow"
           src={require('../../_assets/img/back.png')}
         />
       </div>
