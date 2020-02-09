@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentBox.styles.scss';
 
-const CommentBox = ({ handleCommentChange, handleCommentSubmit, isDisabled }) => {
+const CommentBox = ({ comment, handleCommentChange, handleCommentSubmit, isDisabled }) => {
   return (
     <div className="comment-box">
       <textarea
@@ -13,7 +13,7 @@ const CommentBox = ({ handleCommentChange, handleCommentSubmit, isDisabled }) =>
         onChange={handleCommentChange}
       />
       <button
-        disabled={isDisabled}
+        disabled={isDisabled || comment === ''}
         onClick={handleCommentSubmit}
       >
         {isDisabled ? "Comment submitted!" : "Submit"}

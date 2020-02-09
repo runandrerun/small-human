@@ -16,7 +16,7 @@ const MenuItem = ({ type, description, favoriteBy, imageUrl, size, history, link
             <img
               className="background-image"
               src={imageUrl}
-              alt={``}
+              alt={type}
             />
           </div>
           <div className="item-back">

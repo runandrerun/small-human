@@ -1,4 +1,7 @@
 .about-card {
+  width: 66%;
+  padding: 20px;
+
   h1 {
     font-size: 26px;
     font-weight: 800;
@@ -10,13 +13,20 @@
     text-align: left;
     p {
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.6;
+      a {
+        font-weight: bold;
+        color: #FA7268;
+        text-decoration: none;
+      }
     }
     ul {
       margin: 0;
       padding: 0;
       list-style-type: none;
       li {
+        font-size: inherit;
+        line-height: inherit;
         padding: 5px;
         border-bottom: 1px solid #292929;
         &:last-child {
@@ -24,5 +34,9 @@
         }
       }
     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
   }
 }

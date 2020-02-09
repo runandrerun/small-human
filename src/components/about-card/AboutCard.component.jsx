@@ -10,13 +10,14 @@ const AboutCard = () => {
         <p>Structure of the project is as follows: </p>
         <ul>
           <li>redux is split between an actions, reducers, and store folder</li>
-          <li>app.js acts as the launching point for routes</li>
+          <li>app.js acts as the launching point for routes – due to the way how gh-pages works, I added edge cases for links</li>
           <li>pages folder holds components which act as containers</li>
           <li>components folder contain components that are displayed in pages</li>
           <li>every component has its own folder which contains a sass file</li>
           <li>_assets folder contains any usable assets</li>
           <li>data does not persist, but will remain in store as long as page isn't refreshed</li>
         </ul>
+        <p>If you wish to run the app locally, please clone it down from my <a href="https://github.com/runandrerun/small-human" target="_blank" rel="noopener noreferrer">repo</a>. Once cloned, please cd into the folder (cd small-human), and run npm install. Afterwards, run npm start.</p>
       </div>
     </div>
   );

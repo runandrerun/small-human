@@ -9,7 +9,7 @@ const ShopPage = ({ history }) => {
       <div
         className="back-arrow"
         onClick={() => {
-          history.push(`/`)
+          history.push(`/small-human/`)
         }}
       >
         <img

@@ -5,14 +5,14 @@ import './Navbar.styles.scss';
 const Navbar = () => {
   return (
     <div id="navbar">
-      <Link className="logo-container" to="/">
+      <Link className="logo-container" to="/small-human/">
         <img className="logo" src={require('../../_assets/img/leaves.svg')} alt="Small Human logo"/>
       </Link>
       <div className="options">
-        <Link className="option" to="/">
+        <Link className="option" to="/small-human/">
           SHOP
         </Link>
-        <Link className="option" to="/about">
+        <Link className="option" to="/small-human/about">
           ABOUT
         </Link>
       </div>

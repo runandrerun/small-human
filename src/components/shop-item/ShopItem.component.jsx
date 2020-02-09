@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CommentBox from '../comment-box/CommentBox.component.jsx';
 import CommentsList from '../comments-list/CommentsList.component.jsx';
+import HeartLike from '../heart-like/HeartLike.component.jsx';
 import { connect } from 'react-redux';
-import { findPlant, submitComment } from '../../actions';
+import { findPlant, submitComment, submitLike } from '../../actions';
 import { withRouter } from 'react-router-dom';
 import './ShopItem.styles.scss';
 
@@ -10,6 +11,7 @@ class ShopItem extends Component {
 
   state = {
     comment: '',
+    liked: false,
     commentPosted: false
   };
 
@@ -22,7 +24,7 @@ class ShopItem extends Component {
     e.preventDefault();
     this.setState({
       comment: e.target.value
-    }, () => console.log(this.state.comment));
+    });
   };
 
   handleCommentSubmit = (e) => {
@@ -33,16 +35,25 @@ class ShopItem extends Component {
       commentPosted: true
     });
     return dispatch(submitComment(selectedPlant.id, comment));
-  }
+  };
+
+  handleSubmitLike = (e) => {
+    const { dispatch, selectedPlant } = this.props;
+    this.setState({
+      liked: true
+    });
+    e.preventDefault();
+    return dispatch(submitLike(selectedPlant.id));
+  };
 
   render() {
     const { selectedPlant } = this.props;
-    const { commentPosted } = this.state;
+    const { comment, commentPosted } = this.state;
       return (
         <div className="shop-item">
           <div className="item-image-container">
             <img
-              src={'https://via.placeholder.com/600'}
+              src={selectedPlant.imageUrl}
               alt={selectedPlant.type}
             />
           </div>
@@ -53,15 +64,13 @@ class ShopItem extends Component {
             <div className="description">
               {selectedPlant.description}
             </div>
-            <div className="likes">
-              {selectedPlant.likes}
-              <img
-                className="heart"
-                src={require('../../_assets/img/heart.png')}
-                alt={selectedPlant.likes > 1 ? `Hearts` : `Heart`}
-              />
-            </div>
+            <HeartLike
+              handleSubmitLike={this.handleSubmitLike}
+              likes={selectedPlant.likes}
+              liked={selectedPlant.userLiked}
+            />
             <CommentBox
+              comment={comment}
               isDisabled={commentPosted}
               handleCommentChange={this.handleCommentChange}
               handleCommentSubmit={this.handleCommentSubmit}

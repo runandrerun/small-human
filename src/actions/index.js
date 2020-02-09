@@ -1,7 +1,6 @@
-import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT } from './types'
+import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT, SUBMIT_LIKE } from './types'
 
 export const findPlant = (id) => {
-  console.log("findPlant 1", id)
   return (dispatch) => {
     return dispatch({
       type: FIND_PLANT,
@@ -11,15 +10,23 @@ export const findPlant = (id) => {
 };
 
 export const submitComment = (id, comment) => {
-  console.log("hit submit", comment)
   return (dispatch) => {
     return dispatch({
       type: SUBMIT_COMMENT,
       id: id,
       payload: comment
-    })
-  }
-}
+    });
+  };
+};
+
+export const submitLike = (id) => {
+  return (dispatch) => {
+    return dispatch({
+      type: SUBMIT_LIKE,
+      payload: id
+    });
+  };
+};
 
 export const fetchAllPlants = () => {
   return {

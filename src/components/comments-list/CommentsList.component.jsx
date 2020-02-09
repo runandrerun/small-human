@@ -8,10 +8,11 @@ const CommentsList = ({ comments }) => {
         Comments
       </div>
       <ul>
-      {
+      { comments.length >= 1 ?
         comments.map((comment, i) => {
           return <li key={i}>{comment}</li>
-        })
+        }) :
+        'There are no comments!'
       }
       </ul>
     </div>

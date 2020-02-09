@@ -1,0 +1,13 @@
+.likes {
+  font-size: 16px;
+  margin-bottom: 10px;
+  .heart {
+    width: 13px;
+    margin-left: 4px;
+    transition: transform 0.8s;
+
+    &:hover {
+      transform: scale(1.5) rotate(360deg);
+    }
+  }
+}
