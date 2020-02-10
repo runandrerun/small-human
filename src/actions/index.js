@@ -1,4 +1,4 @@
-import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT, SUBMIT_LIKE } from './types'
+import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT, SUBMIT_LIKE, SUBMIT_COMMENT_LIKE } from './types'
 
 export const findPlant = (id) => {
   return (dispatch) => {
@@ -27,6 +27,16 @@ export const submitLike = (id) => {
     });
   };
 };
+
+export const submitCommentLike = (plantId, commentId) => {
+  return (dispatch) => {
+    return dispatch({
+      type: SUBMIT_COMMENT_LIKE,
+      plantId: plantId,
+      commentId: commentId
+    })
+  }
+}
 
 export const fetchAllPlants = () => {
   return {

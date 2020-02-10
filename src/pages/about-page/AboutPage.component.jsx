@@ -1,13 +1,16 @@
 import React from 'react';
 import AboutCard from '../../components/about-card/AboutCard.component';
+// import history from '../../history';
 import './AboutPage.styles.scss';
 
 const AboutPage = () => {
   return (
-    <div className="about-page">
+    <section className="about-page">
       <AboutCard />
-    </div>
+    </section>
   );
 };
 
 export default AboutPage;
+
+// history.push({ pathname: "/small-human/" });

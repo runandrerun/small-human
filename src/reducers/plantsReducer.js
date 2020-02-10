@@ -1,4 +1,4 @@
-import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT, SUBMIT_LIKE } from '../actions/types';
+import { ALL_PLANTS, FIND_PLANT, SUBMIT_COMMENT, SUBMIT_LIKE, SUBMIT_COMMENT_LIKE } from '../actions/types';
 
 const initialState = {
   plants: [
@@ -11,7 +11,20 @@ const initialState = {
         linkUrl: 'shop/1',
         likes: 21,
         userLiked: false,
-        comments: ["Pretty cool!", "Managed to keep it alive lol"]
+        comments: [
+          {
+            id: 1,
+            comment: "Pretty cool!",
+            likes: 2,
+            userLiked: false
+          },
+          {
+            id: 2,
+            comment: "Managed to keep it alive lol",
+            likes: 3,
+            userLiked: true
+          }
+        ]
       },
       {
         type: 'rose',
@@ -22,7 +35,20 @@ const initialState = {
         linkUrl: 'shop/2',
         likes: 10,
         userLiked: false,
-        comments: ["Nice!", "so pretty!"]
+        comments: [
+          {
+            id: 1,
+            comment: "Nice!",
+            likes: 5,
+            userLiked: false
+          },
+          {
+            id: 2,
+            comment: "so pretty!",
+            likes: 10,
+            userLiked: false
+          }
+        ]
       },
       {
         type: 'lotus',
@@ -33,7 +59,14 @@ const initialState = {
         linkUrl: 'shop/3',
         likes: 11,
         userLiked: false,
-        comments: ["Brings peace!"]
+        comments: [
+          {
+            id: 1,
+            comment: "Brings peace!",
+            likes: 11,
+            userLiked: true
+          }
+        ]
       },
       {
         type: 'orchid',
@@ -44,7 +77,20 @@ const initialState = {
         linkUrl: 'shop/4',
         likes: 19,
         userLiked: false,
-        comments: ["Very bright", "It's great!"]
+        comments: [
+          {
+            id: 1,
+            comment: "Very bright",
+            likes: 4,
+            userLiked: false
+          },
+          {
+            id: 2,
+            comment: "It's great!",
+            likes: 9,
+            userLiked: true,
+          }
+        ]
       },
       {
         type: 'hydrangae',
@@ -55,7 +101,20 @@ const initialState = {
         linkUrl: 'shop/5',
         likes: 10,
         userLiked: false,
-        comments: ["Brings lots of energy", "takes some work, but fun!"]
+        comments: [
+          {
+            id: 1,
+            comment: "Brings lots of energy",
+            likes: 7,
+            userLiked: true,
+          },
+          {
+            id: 2,
+            comment: "takes some work, but fun!",
+            likes: 4,
+            userLiked: false,
+          }
+        ]
       },
       {
         type: 'cactus',
@@ -66,7 +125,14 @@ const initialState = {
         linkUrl: 'shop/6',
         likes: 8,
         userLiked: false,
-        comments: ["Simple! Not much work"]
+        comments: [
+          {
+            id: 1,
+            comment: "Simple! Not much work",
+            likes: 13,
+            userLiked: true
+          }
+        ]
       },
       {
         type: 'peonies',
@@ -90,7 +156,14 @@ const initialState = {
         linkUrl: 'shop/7',
         likes: 20,
         userLiked: false,
-        comments: ["Tough for a beginner plant!"]
+        comments: [
+          {
+            id: 1,
+            comment:"Tough for a beginner plant!",
+            likes: 15,
+            userLiked: true,
+          }
+        ]
       }
     ],
     selectedPlant: {}
@@ -112,7 +185,15 @@ const plantsReducer = (state = initialState, action) => {
     case SUBMIT_COMMENT:
     const updatedPlantComments = state.plants.find(plant => {
       if (parseInt(plant.id) === parseInt(parseInt(action.id))) {
-        plant.comments = [ ...plant.comments, action.payload];
+        plant.comments = [
+          ...plant.comments,
+          {
+            id: plant.comments.length >= 1 ? plant.comments.length + 1 : 1,
+            comment: action.payload,
+            likes: 0,
+            userLiked: false,
+          }
+        ];
         return plant;
       };
     });
@@ -121,9 +202,31 @@ const plantsReducer = (state = initialState, action) => {
       selectedPlant: updatedPlantComments
     };
 
+    case SUBMIT_COMMENT_LIKE:
+    const updatedPlantCommentLikes = state.plants.find(plant => {
+      if (parseInt(plant.id) === parseInt(action.plantId)) {
+        plant.comments.find(comment => {
+          if (parseInt(comment.id) === parseInt(action.commentId)) {
+            if (comment.userLiked === false) {
+             comment.likes = comment.likes + 1;
+             comment.userLiked = true;
+            } else {
+             comment.likes = comment.likes - 1;
+             comment.userLiked = false;
+            };
+          };
+        });
+        return plant;
+      };
+    });
+    return {
+      ...state,
+      selectedPlant: updatedPlantCommentLikes
+    };
+
     case SUBMIT_LIKE:
     const updatedPlantLikes = state.plants.find(plant => {
-      if (parseInt(plant.id) === parseInt(parseInt(action.payload))) {
+      if (parseInt(plant.id) === parseInt(action.payload)) {
         if (plant.userLiked === false) {
           plant.likes = plant.likes + 1;
           plant.userLiked = true;

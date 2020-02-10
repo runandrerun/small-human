@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CommentBox from '../comment-box/CommentBox.component.jsx';
 import CommentsList from '../comments-list/CommentsList.component.jsx';
 import HeartLike from '../heart-like/HeartLike.component.jsx';
+import history from '../../history';
 import { connect } from 'react-redux';
 import { findPlant, submitComment, submitLike } from '../../actions';
 import { withRouter } from 'react-router-dom';
@@ -17,6 +18,7 @@ class ShopItem extends Component {
 
   componentDidMount() {
     const { dispatch, match } = this.props;
+    history.push({ pathname: `/small-human/shop/${match.params.shopId}` });
     return dispatch(findPlant(match.params.shopId));
   };
 
@@ -77,11 +79,11 @@ class ShopItem extends Component {
             />
             { selectedPlant.comments ?
               <CommentsList
+                plantId={selectedPlant.id}
                 comments={selectedPlant.comments}
               />  :
               "No comments yet!"
             }
-
           </div>
         </div>
       );
@@ -93,6 +95,5 @@ const mapStateToProps = (state) => {
     selectedPlant: state.plantsState.selectedPlant
   };
 };
-
 
 export default withRouter(connect(mapStateToProps)(ShopItem));

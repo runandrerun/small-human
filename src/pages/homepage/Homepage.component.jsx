@@ -1,5 +1,6 @@
 import React from 'react';
 import Directory from '../../components/directory/Directory.component';
+import history from '../../history';
 import './Homepage.styles.scss';
 
 const Homepage = () => {
@@ -12,3 +13,5 @@ const Homepage = () => {
 
 
 export default Homepage;
+
+history.push({ pathname: "/small-human/" });

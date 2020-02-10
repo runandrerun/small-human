@@ -1,25 +1,27 @@
 import React from 'react';
 import './HeartLike.styles.scss';
 
-const HeartLike = ({ likes, liked, handleSubmitLike }) => {
+const HeartLike = ({ id, likes, liked, handleSubmitLike }) => {
   return (
-    <div className="likes">
-      {likes ? likes : `Be the first to like it!`}
+    <span className="likes">
+      {likes}
       { liked ?
         <img
           onClick={handleSubmitLike}
+          data-id={id}
           className="heart"
           src={require('../../_assets/img/heart-full.png')}
           alt={likes > 1 ? `Hearts` : `Heart`}
         /> :
         <img
           onClick={handleSubmitLike}
+          data-id={id}
           className="heart"
           src={require('../../_assets/img/heart.png')}
           alt={likes > 1 ? `Hearts` : `Heart`}
         />
       }
-    </div>
+    </span>
   );
 };
 
