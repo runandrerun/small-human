@@ -3,14 +3,14 @@ import Directory from '../../components/directory/Directory.component';
 import history from '../../history';
 import './Homepage.styles.scss';
 
+
 const Homepage = () => {
   return (
     <section className="homepage">
-      <Directory />
+        <Directory />
     </section>
   );
 };
-
 
 export default Homepage;
 

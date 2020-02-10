@@ -153,7 +153,7 @@ const initialState = {
         imageUrl: 'https://res.cloudinary.com/dx34xrygi/image/upload/v1581275562/tulips.jpg',
         size: 'large',
         id: 8,
-        linkUrl: 'shop/7',
+        linkUrl: 'shop/8',
         likes: 20,
         userLiked: false,
         comments: [
@@ -161,6 +161,85 @@ const initialState = {
             id: 1,
             comment:"Tough for a beginner plant!",
             likes: 15,
+            userLiked: true,
+          }
+        ]
+      },
+      {
+        type: 'monstera',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        favoriteBy: 'Kary',
+        imageUrl: 'https://res.cloudinary.com/dx34xrygi/image/upload/v1581367129/monstera.jpg',
+        id: 9,
+        linkUrl: 'shop/9',
+        likes: 7,
+        userLiked: false,
+        comments: [
+          {
+            id: 1,
+            comment:"Tough for a beginner plant!",
+            likes: 15,
+            userLiked: true,
+          }
+        ]
+
+      },
+      {
+        type: 'bonsai',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        favoriteBy: 'Peter',
+        imageUrl: 'https://res.cloudinary.com/dx34xrygi/image/upload/v1581367129/bonsai.jpg',
+        id: 10,
+        linkUrl: 'shop/10',
+        likes: 8,
+        userLiked: false,
+        comments: [
+          {
+            id: 1,
+            comment:"Tough, but fun if dedicated!",
+            likes: 15,
+            userLiked: true,
+          },
+          {
+            id: 1,
+            comment:"Very satisfying, but requires a lot of work",
+            likes: 12,
+            userLiked: false,
+          }
+        ]
+      },
+      {
+        type: 'sunflower',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        favoriteBy: 'Jenny',
+        imageUrl: 'https://res.cloudinary.com/dx34xrygi/image/upload/v1581367129/sunflower.jpg',
+        id: 11,
+        linkUrl: 'shop/11',
+        likes: 13,
+        userLiked: false,
+        comments: [
+          {
+            id: 1,
+            comment:"Tough for a beginner plant!",
+            likes: 15,
+            userLiked: true,
+          }
+        ]
+      },
+      {
+        type: 'weeping fig',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        favoriteBy: 'Richard',
+        imageUrl: 'https://res.cloudinary.com/dx34xrygi/image/upload/v1581367510/weeping-fig.jpg',
+        id: 12,
+        linkUrl: 'shop/12',
+        likes: 20,
+        userLiked: true,
+        comments: [
+          {
+            id: 1,
+            comment:"Really love this one",
+            likes: 3,
             userLiked: true,
           }
         ]
