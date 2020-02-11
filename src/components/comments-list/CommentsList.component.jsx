@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { submitCommentLike } from '../../actions';
 import './CommentsList.styles.scss';
 
-
-
 class CommentsList extends Component {
 
   state = {

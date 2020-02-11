@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemContent from '../item-content/ItemContent.component';
 import { withRouter } from 'react-router-dom';
 import './MenuItem.styles.scss';
 
@@ -25,14 +26,10 @@ const MenuItem = ({ type, description, favoriteBy, imageUrl, size, history, link
             </div>
           </div>
         </div>
-        <div className="menu-item-content">
-          <span className="type">
-            {type}
-          </span>
-          <div className="description">
-            {description}
-          </div>
-        </div>
+        <ItemContent
+          type={type}
+          description={description}
+        />
       </div>
     </div>
 

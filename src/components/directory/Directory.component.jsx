@@ -1,5 +1,5 @@
 import React, { Component, lazy, Suspense } from 'react';
-import Loading from '../loading/Loading.component';
+import Loader from '../loader/Loader.component';
 import { connect } from 'react-redux';
 import './Directory.styles.scss';
 
@@ -10,7 +10,7 @@ class Directory extends Component {
     const { plants } = this.props;
     return (
     <div id="directory-menu">
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loader />}>
         {
           plants.map(({ id, ...otherPlantProps }) => {
             return (

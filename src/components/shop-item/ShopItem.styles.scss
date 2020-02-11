@@ -12,7 +12,7 @@
     flex-direction: column;
     margin-right: 10px;
     animation: fadeIn 2s linear;
-    
+
     @media only screen and (max-width: 600px) {
       margin: 0 auto;
     }
@@ -29,7 +29,7 @@
      100% { opacity: 1; }
   }
 
-  .item-content {
+  .item-content-container {
     display: flex;
     flex-direction: column;
     text-align: left;

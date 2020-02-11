@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 // import { PersistGate } from 'redux-persist/integration/react';
 // import { persistStore } from 'redux-persist'
 // import Loading from './components/loading/Loading.component';
 import configureStore from './store/configureStore';
-import history from './history';
+// import history from './history';
 
 const store = configureStore();
 // const persistor = persistStore(store);
@@ -17,7 +17,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     {/*<PersistGate loading={<Loading />} persistor={persistor}>*/}
-      <Router history={history}>
+      <Router>
         <App />
       </Router>
     {/*</PersistGate>*/}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import CommentBox from '../comment-box/CommentBox.component.jsx';
-import CommentsList from '../comments-list/CommentsList.component.jsx';
-import HeartLike from '../heart-like/HeartLike.component.jsx';
+import ItemContent from '../item-content/ItemContent.component';
+import CommentBox from '../comment-box/CommentBox.component';
+import CommentsList from '../comments-list/CommentsList.component';
+import HeartLike from '../heart-like/HeartLike.component';
 import history from '../../history';
 import { connect } from 'react-redux';
 import { findPlant, submitComment, submitLike } from '../../actions';
@@ -59,13 +60,11 @@ class ShopItem extends Component {
               alt={selectedPlant.type}
             />
           </div>
-          <div className="item-content">
-            <div className="type">
-              {selectedPlant.type}
-            </div>
-            <div className="description">
-              {selectedPlant.description}
-            </div>
+          <div className="item-content-container">
+            <ItemContent
+              type={selectedPlant.type}
+              description={selectedPlant.description}
+            />
             <HeartLike
               handleSubmitLike={this.handleSubmitLike}
               likes={selectedPlant.likes}
