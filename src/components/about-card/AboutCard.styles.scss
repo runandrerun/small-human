@@ -18,6 +18,9 @@
         font-weight: bold;
         color: #FA7268;
         text-decoration: none;
+        &:hover, &:active {
+          color: #000000;
+        }
       }
     }
     ul {

@@ -6,14 +6,18 @@ const Navbar = () => {
   return (
     <div id="navbar">
       <Link className="logo-container" to="/small-human/">
-        <img className="logo" src={require('../../_assets/img/leaves.svg')} alt="Small Human logo"/>
+        <img
+          className="logo"
+          src={require('../../_assets/img/leaves.svg')}
+          alt="Small Human logo"
+        />
       </Link>
       <div className="options">
         <Link className="option" to="/small-human/">
-          SHOP
+          <span>S</span><span>H</span><span>O</span><span>P</span>
         </Link>
         <Link className="option" to="/small-human/about">
-          ABOUT
+          <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
         </Link>
       </div>
     </div>

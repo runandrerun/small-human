@@ -13,6 +13,11 @@
 
     .logo {
       height: 50px;
+      transition: transform 0.8s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -31,6 +36,13 @@
       text-decoration: none;
       border-bottom: 1px solid #ffffff;
       transition: border-bottom 1s, transform 0.8s, color 1s;
+
+      span {
+        transition: vertical-align 0.8s;
+        &:hover {
+          vertical-align: 3px;
+        }
+      }
 
       &:hover, &:active {
         transform: scale(1.05);
