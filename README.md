@@ -11,4 +11,4 @@ If you wish to run this locally, please feel free to clone it down and cd into t
 * React
 * Redux + Thunk
 * React-Router
-* custom Sass
+* custom Sass (styles and animations) and Flexbox (responsiveness)
