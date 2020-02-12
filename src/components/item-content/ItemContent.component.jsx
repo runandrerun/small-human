@@ -5,6 +5,7 @@ export const ItemContent = ({ type, description }) => {
   return (
     <div className="item-content">
       <span className="type">
+        <div className="wipe"></div>
         {type}
       </span>
       <div className="description">
