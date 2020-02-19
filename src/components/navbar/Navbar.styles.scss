@@ -1,18 +1,20 @@
+@import '../../_assets/css/_mixins.scss';
+
 #navbar {
-  height: 70px;
+  height: 7rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 
   .logo-container {
     height: 100%;
-    width: 70px;
+    width: 7rem;
     text-align: left;
 
     .logo {
-      height: 50px;
+      height: 5rem;
       transition: transform 0.8s;
 
       &:hover {
@@ -29,12 +31,13 @@
     justify-content: flex-end;
 
     .option {
-      padding: 10px 15px;
-      color: #292929;
+      font-size: 1.6rem;
+      padding: 1rem 1.5rem;
+      color: $primary-body-color;
       font-weight: bold;
       font-family: sans-serif;
       text-decoration: none;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid $white;
       transition: border-bottom 1s, transform 0.8s, color 1s;
 
       span {
@@ -46,12 +49,12 @@
 
       &:hover, &:active {
         transform: scale(1.05);
-        border-bottom: 2px solid #292929;
+        border-bottom: 2px solid $primary-body-color;
       }
 
       &:active {
         color: #FA7268;
-        border-bottom: 2px solid #FA7268;
+        border-bottom: 2px solid $brand-color;
       }
     }
   }

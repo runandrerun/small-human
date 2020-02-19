@@ -1,18 +1,18 @@
+@import '../../_assets/css/_mixins.scss';
+
 .comments-list {
-  margin-top: 20px;
+  margin-top: 2rem;
   .title {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     font-weight: 800;
   }
   ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    @include unstyled-list;
     li {
       display: block;
-      border-bottom: 1px solid #FA7268;
-      padding: 5px;
+      border-bottom: .1rem solid $brand-color;
+      padding: .5rem;
       &:last-child {
         border-bottom: none;
       }

@@ -1,13 +1,15 @@
+@import '../../_assets/css/_mixins.scss';
+
 .loader-container {
   margin: 0 auto;
-  
+
   .loader {
     text-align: center;
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #FA7268;
+    border: .8rem solid $gray;
+    border-top: .8rem solid $brand-color;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     animation: spin 1.5s linear infinite;
   }
 
