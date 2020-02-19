@@ -1,0 +1,12 @@
+$primary-body-color: #292929;
+$brand-color: #FA7268;
+$white: #ffffff;
+$black: #000000;
+$gray: #f3f3f3;
+$disabled-gray: #eaeaea;
+
+@mixin unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
