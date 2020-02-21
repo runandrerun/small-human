@@ -1,3 +1,4 @@
+@import '../../_assets/css/_variables.scss';
 @import '../../_assets/css/_mixins.scss';
 
 .about-card {
@@ -14,7 +15,7 @@
   .about-content {
     text-align: left;
     p {
-      font-size: 16px;
+      font-size: 1.6rem;
       line-height: 1.6;
       a {
         font-weight: bold;
@@ -27,9 +28,9 @@
     }
     ul {
       @include unstyled-list;
-    
+
       li {
-        font-size: inherit;
+        font-size: 1.6rem;
         line-height: inherit;
         padding: .5rem;
         border-bottom: .1rem solid $primary-body-color;

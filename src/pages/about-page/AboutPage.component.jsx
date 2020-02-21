@@ -5,7 +5,7 @@ import './AboutPage.styles.scss';
 
 const AboutPage = () => {
   return (
-    <section className="about-page">
+    <section id="about-page">
       <AboutCard />
     </section>
   );
