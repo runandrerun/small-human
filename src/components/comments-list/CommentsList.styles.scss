@@ -1,3 +1,4 @@
+@import '../../_assets/css/_variables.scss';
 @import '../../_assets/css/_mixins.scss';
 
 .comments-list {
@@ -9,6 +10,7 @@
   }
   ul {
     @include unstyled-list;
+
     li {
       display: block;
       border-bottom: .1rem solid $brand-color;

@@ -5,7 +5,7 @@ import './ShopPage.styles.scss';
 
 const ShopPage = ({ history }) => {
   return (
-    <section className="shop-page">
+    <section id="shop-page">
       <div
         className="back-arrow"
         onClick={() => {

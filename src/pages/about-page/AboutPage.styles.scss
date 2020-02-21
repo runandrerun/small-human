@@ -1,6 +1,6 @@
-.about-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import '../../_assets/css/_mixins.scss';
+
+#about-page {
+  @include responsive-page;
   padding: 2rem auto;
 }

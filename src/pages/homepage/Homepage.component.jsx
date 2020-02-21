@@ -6,7 +6,7 @@ import './Homepage.styles.scss';
 
 const Homepage = () => {
   return (
-    <section className="homepage">
+    <section id="homepage">
         <Directory />
     </section>
   );
